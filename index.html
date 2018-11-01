@@ -52,29 +52,39 @@ body {font-size:16px;}
     <hr style="width:50px;border:5px solid " class="w3-round">
   </div>
 
-	<div tabindex="0" class="onclick-menu">
-	    <ul class="onclick-menu-content">
-	        <li><button onclick="alert('click 1')">Look, mom</button></li>
-	        <li><button onclick="alert('click 2')">no JavaScript!</button></li>
-	        <li><button onclick="alert('click 3')">Pretty nice, right?</button></li>
-	    </ul>
+	<h2>Clickable Dropdown</h2>
+	<p>Click on the button to open the dropdown menu.</p>
+
+	<div class="dropdown">
+	<button onclick="myFunction()" class="location">Location</button>
+	  <div id="myDropdown" class="dropdown-content">
+	    <a href="#rimac">Rimac Gym</a>
+	    <a href="#canyonvista">Canyon Vista</a>
+	    <a href="#main">Main Gym</a>
+			<a href="#main">Rec Gym</a>
+	  </div>
 	</div>
 
-	.onclick-menu {
-	    position: relative;
-	    display: inline-block;
+	<script>
+	/* When the user clicks on the button,
+	toggle between hiding and showing the dropdown content */
+	function myFunction() {
+	    document.getElementById("myDropdown").classList.toggle("show");
 	}
-	.onclick-menu:before {
-	    content: "click me!";
-	}
-	.onclick-menu:focus .onclick-menu-content {
-	    display: block;
-	}
-	.onclick-menu-content {
-	    position: absolute;
-	    z-index: 1;
 
-	    display: none;
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) {
+	  if (!event.target.matches('.dropbtn')) {
+
+	    var dropdowns = document.getElementsByClassName("dropdown-content");
+	    var i;
+	    for (i = 0; i < dropdowns.length; i++) {
+	      var openDropdown = dropdowns[i];
+	      if (openDropdown.classList.contains('show')) {
+	        openDropdown.classList.remove('show');
+	      }
+	    }
+	  }
 	}
 
   <!-- Packages / Pricing Tables -->
