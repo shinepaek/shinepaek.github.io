@@ -53,13 +53,23 @@ body {font-size:16px;}
   </div>
 
 	<div class="dropdown">
-	  <button class="dropbtn">Location</button>
-	  <div class="dropdown-content">
-	    <a href="./rimac.html">Rimac Gym</a>
-	    <a href="./cv.html">Canyon View Gym</a>
-	    <a href="./main.html">Main Gym</a>
+		<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+	  <div id="myDropdown" class="dropdown-content">
+			<a onclick="./rimac.html">Rimac Gym</a>
+			<a onclick="./cv.html">Canyon View Gym</a>
+			<a onclick="./main.html">Main Gym</a>
 	  </div>
 	</div>
+
+	/* Dropdown Button for Location */
+	.dropbtn {
+		background-color: #3498DB;
+		color: blue;
+		font-size: 16px;
+		border: none;
+		cursor: pointer;
+	}
+
 
   <!-- Packages / Pricing Tables -->
   <div class="w3-container" id="packages" style="margin-top:75px">
