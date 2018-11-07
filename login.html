@@ -1,21 +1,135 @@
-<!doctype html>
-
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>COGS 120 A4 Project</title>
-</head>
-
-
+<!DOCTYPE html>
+<html lang="en">
+<title>BroBells</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
 <body>
-	<h1>Login Here</h1> <!-- h1 through h5 are headers. The higher the number, the smaller the header -->
-	<h2>Enter the information below:</h2>
 
-	<!-- p means paragraph -->
-	<p>Username:</p>
-	<p>Password:</p>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Stealthily<br>Healthily</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="./login.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Log In</a>
+		<a href="./help.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Help</a>
+
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3- w3-margin-right" onclick="w3_open()">☰</a>
+  <span> Stealthily Healthily</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Welcome, Triton</b></h1>
+    <h1 class="w3-xxxlarge w3-text-"><b>Where would you like to go?</b></h1>
+    <hr style="width:50px;border:5px solid " class="w3-round">
+  </div>
+
+<!--Dropdown Menu-->
+			<head>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<style>
+hr style="width:50px;border:5px solid " class="w3-round"
+			.dropbtn {
+			    background-color: #3498DB;
+			    color: "w3-amber";
+			    padding: 16px;
+			    font-size: 16px;
+			    border: none;
+			    cursor: pointer;
+			}
+
+			.dropbtn:hover, .dropbtn:focus {
+			    background-color: #2980B9;
+			}
+
+			.dropdown {
+			    position: relative;
+			    display: inline-block;
+			}
+
+			.dropdown-content {
+			    display: none;
+			    position: absolute;
+			    background-color: #f1f1f1;
+			    min-width: 160px;
+			    overflow: auto;
+			    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			    z-index: 1;
+			}
+
+			.dropdown-content a {
+			    color: "w3-amber";
+			    padding: 24px 32px;
+			    text-decoration: none;
+			    display: block;
+			}
+
+			.dropdown a:hover {background-color: #ddd;}
+
+			.show {display: block;}
+			</style>
+			</head>
+			<body>
+
+			<div class="dropdown">
+			<button onclick="myFunction()" class="dropbtn" class="w3-xxxlarge w3-text- w3-amber">Location</button>
+			  <div id="myDropdown" class="dropdown-content">
+			    <a href="./rimac.html"onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Rimac Gymnasium</a>
+			    <a href="./cv.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Canyonview Gymnasium</a>
+			    <a href="./main.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Main Gymnasium</a>
+					<a href="./recgym.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Rec Gymnasium</a>
+			  </div>
+			</div>
+
+			<script>
+			/* When the user clicks on the button,
+			toggle between hiding and showing the dropdown content */
+			function myFunction() {
+			    document.getElementById("myDropdown").classList.toggle("show");
+			}
+
+			// Close the dropdown if the user clicks outside of it
+			window.onclick = function(event) {
+			  if (!event.target.matches('.dropbtn')) {
+
+			    var dropdowns = document.getElementsByClassName("dropdown-content");
+			    var i;
+			    for (i = 0; i < dropdowns.length; i++) {
+			      var openDropdown = dropdowns[i];
+			      if (openDropdown.classList.contains('show')) {
+			        openDropdown.classList.remove('show');
+			      }
+			    }
+			  }
+			}
+			</script>
+		</body>
+
+<!-- End page content -->
 
 
-	</ol>
+</script>
+
 </body>
 </html>

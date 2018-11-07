@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>BroBells</title>
+<title>Brobells</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -20,9 +20,11 @@ body {font-size:16px;}
     <h3 class="w3-padding-64"><b>Stealthily<br>Healthily</b></h3>
   </div>
   <div class="w3-bar-block">
-    <a href="./login.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Log In</a>
-		<a href="./help.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Help</a>
-
+		<a href="./index.html" onclick= "w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+    <a href="./cv.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Canyonview Gym</a>
+    <a href="./rimac.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Rimac Gym</a>
+    <a href="./main.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Main Gym</a>
+    <a href="./recgym.html"onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Rec Gym</a>
   </div>
 </nav>
 
@@ -41,94 +43,40 @@ body {font-size:16px;}
   <!-- Header -->
   <div class="w3-container" style="margin-top:80px" id="showcase">
     <h1 class="w3-jumbo"><b>Welcome, Triton</b></h1>
-    <h1 class="w3-xxxlarge w3-text-"><b>Where would you like to go?</b></h1>
+    <h1 class="w3-xxxlarge w3-text-"><b>Please log in below:</b></h1>
     <hr style="width:50px;border:5px solid " class="w3-round">
   </div>
 
-<!--Dropdown Menu-->
-			<head>
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<style>
-hr style="width:50px;border:5px solid " class="w3-round"
-			.dropbtn {
-			    background-color: #3498DB;
-			    color: "w3-amber";
-			    padding: 16px;
-			    font-size: 16px;
-			    border: none;
-			    cursor: pointer;
-			}
+  <!-- Different Equipment Types-->
 
-			.dropbtn:hover, .dropbtn:focus {
-			    background-color: #2980B9;
-			}
+  <div class="w3-row-padding">
+    <div class="w3-row-padding w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-light-grey w3-xlarge w3-padding-32">Username:</li>
+        <li class="w3-padding-16">
+          <h2>Password:</h2>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button onclick="w3_close()"><a href="./cvyogaball.html" >Log In</a>
+          </button>
+        </li>
+      </ul>
+    </div>
 
-			.dropdown {
-			    position: relative;
-			    display: inline-block;
-			}
 
-			.dropdown-content {
-			    display: none;
-			    position: absolute;
-			    background-color: #f1f1f1;
-			    min-width: 160px;
-			    overflow: auto;
-			    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-			    z-index: 1;
-			}
 
-			.dropdown-content a {
-			    color: "w3-amber";
-			    padding: 24px 32px;
-			    text-decoration: none;
-			    display: block;
-			}
+</div>
 
-			.dropdown a:hover {background-color: #ddd;}
+	<script>
 
-			.show {display: block;}
-			</style>
-			</head>
-			<body>
 
-			<div class="dropdown">
-			<button onclick="myFunction()" class="dropbtn" class="w3-xxxlarge w3-text- w3-amber">Location</button>
-			  <div id="myDropdown" class="dropdown-content">
-			    <a href="./rimac.html"onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Rimac Gymnasium</a>
-			    <a href="./cv.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Canyonview Gymnasium</a>
-			    <a href="./main.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Main Gymnasium</a>
-					<a href="./recgym.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Rec Gymnasium</a>
-			  </div>
-			</div>
 
-			<script>
-			/* When the user clicks on the button,
-			toggle between hiding and showing the dropdown content */
-			function myFunction() {
-			    document.getElementById("myDropdown").classList.toggle("show");
-			}
+	}
 
-			// Close the dropdown if the user clicks outside of it
-			window.onclick = function(event) {
-			  if (!event.target.matches('.dropbtn')) {
-
-			    var dropdowns = document.getElementsByClassName("dropdown-content");
-			    var i;
-			    for (i = 0; i < dropdowns.length; i++) {
-			      var openDropdown = dropdowns[i];
-			      if (openDropdown.classList.contains('show')) {
-			        openDropdown.classList.remove('show');
-			      }
-			    }
-			  }
-			}
-			</script>
-		</body>
 
 <!-- End page content -->
 
-
+}
 </script>
 
 </body>
