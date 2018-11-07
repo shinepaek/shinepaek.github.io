@@ -13,3 +13,70 @@
 	</ol>
 </body>
 </html>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3- w3-margin-right" onclick="w3_open()">☰</a>
+  <span> Stealthily Healthily</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Canyonview Gym</b></h1>
+    <hr style="width:50px;border:5px solid " class="w3-round">
+  </div>
+
+<div class="w3-row-padding">
+	<div class="w3-row-padding w3-margin-bottom">
+		<ul class="w3-ul w3-light-grey w3-center">
+			<li class="w3-amber w3-xlarge w3-padding-32">Yoga Balls</li>
+			<li class="w3-padding-16">
+				<div class="dropdown">
+				<button onclick="myFunction()" class="dropbtn" class="w3-xxxlarge w3-text- w3-amber">Location</button>
+					<div id="myDropdown" class="dropdown-content">
+						<a href="./rimac.html"onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Rimac Gymnasium</a>
+						<a href="./cv.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Canyonview Gymnasium</a>
+						<a href="./main.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Main Gymnasium</a>
+						<a href="./recgym.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Rec Gymnasium</a>
+					</div>
+				</div>
+				<span class="w3-opacity">available</span>
+			</li>
+			<li class="w3-light-grey w3-padding-24">
+				<button onclick="w3_close()"><a href="./cvyogaball.html" >Rent Now</a>
+				</button>
+			</li>
+		</ul>
+	</div>
+
+<body>
+
+	<script>
+	/* When the user clicks on the button,
+	toggle between hiding and showing the dropdown content */
+	function myFunction() {
+			document.getElementById("myDropdown").classList.toggle("show");
+	}
+
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function(event) {
+		if (!event.target.matches('.dropbtn')) {
+
+			var dropdowns = document.getElementsByClassName("dropdown-content");
+			var i;
+			for (i = 0; i < dropdowns.length; i++) {
+				var openDropdown = dropdowns[i];
+				if (openDropdown.classList.contains('show')) {
+					openDropdown.classList.remove('show');
+				}
+			}
+		}
+	}
+	</script>
+</body>
