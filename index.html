@@ -96,13 +96,8 @@ span.psw {
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
+    span.psw {  }
+
 }
 </style>
 </head>
@@ -120,15 +115,13 @@ span.psw {
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
 
-    <!--<a href="./login.html" onclick="w3_close()" >Login </a> -->
-
   <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
   </div>
 
   <div class="container" style="background-color:#42aaf4">
-    <button type="button"onclick="w3_close()"><a href="login.html" class="cancelbtn">Login</button>
+    <button type="button" onclick="w3_close()"><a href="login.html" class="cancelbtn">Login</button>
   </div>
 </form>
 
