@@ -54,40 +54,9 @@ body {font-size:16px;}
         </li>
       </ul>
     </div>
+			<!--<button onclick="myFunction()" class="dropbtn" class="w3-xxxlarge w3-text- w3-amber">Location</button>-->
 
 
-			<div class="dropdown">
-			<button onclick="myFunction()" class="dropbtn" class="w3-xxxlarge w3-text- w3-amber">Location</button>
-			  <div id="myDropdown" class="dropdown-content">
-			    <a href="./rimac.html"onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Rimac Gymnasium</a>
-			    <a href="./cv.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Canyonview Gymnasium</a>
-			    <a href="./main.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Main Gymnasium</a>
-					<a href="./recgym.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Rec Gymnasium</a>
-			  </div>
-			</div>
-
-			<script>
-			/* When the user clicks on the button,
-			toggle between hiding and showing the dropdown content */
-			function myFunction() {
-			    document.getElementById("myDropdown").classList.toggle("show");
-			}
-
-			// Close the dropdown if the user clicks outside of it
-			window.onclick = function(event) {
-			  if (!event.target.matches('.dropbtn')) {
-
-			    var dropdowns = document.getElementsByClassName("dropdown-content");
-			    var i;
-			    for (i = 0; i < dropdowns.length; i++) {
-			      var openDropdown = dropdowns[i];
-			      if (openDropdown.classList.contains('show')) {
-			        openDropdown.classList.remove('show');
-			      }
-			    }
-			  }
-			}
-			</script>
 		</body>
 
 <!-- End page content -->
