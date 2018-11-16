@@ -1,4 +1,6 @@
-<?php $psw = $_POST['psw'];
+<?php
+session_start();
+$psw = $_POST['psw'];
 
 if ($psw == "11") {
 header('location: login.html');
