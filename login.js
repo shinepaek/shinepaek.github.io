@@ -17,12 +17,12 @@ function check() {
 
     // entered data from the login-form
     var userName = document.getElementById('userName');
-    var userPw = document.getElementById('userPw');
+    var userPw = document.getElementById("psw");
 
 
 
     // check if stored data from register-form is equal to data from login form
-    if(userName.value != storedName || userPw.value != storedPw) {
+    if(userPw.value != storedPw) { //if(userName.value != storedName || userPw.value != storedPw) {
         alert('ERROR');
     }else {
         alert('You are logged in.');
