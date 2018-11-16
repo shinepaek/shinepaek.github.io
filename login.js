@@ -12,8 +12,8 @@ function store() {
 function check() {
 
     // stored data from the register-form
-    var storedName = localStorage.getItem('myname');
-    var storedPw = localStorage.getItem('pw');
+    var storedName = "as"//localStorage.getItem('myname');
+    var storedPw = "11"//localStorage.getItem('pw');
 
     // entered data from the login-form
     var userName = document.getElementById('userName');
