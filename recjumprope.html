@@ -102,3 +102,30 @@ body {font-size:16px;}
 
 </body>
 </html>
+
+<html>
+
+<body>
+  <!--script type="text/javascript">
+
+    var clicks = 0;
+    function clickMe() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+  </script-->
+
+
+    <script>
+    var add = (function () {
+        var counter = 0;
+        return function () {return counter += 1;}
+    })();
+
+    function clickMe(){
+        document.getElementById("counter").textContent = "Waitlist (" + add() + ")";
+        window.location = "./recwaitlistconfirm.html";
+    }
+    </script>
+</body>
+</html>
