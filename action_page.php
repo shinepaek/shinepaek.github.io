@@ -1,5 +1,5 @@
 <?php
-$psw = $_POST['psw'];
+$psw = $_GET['psw'];
 
 if ($psw == "11") {
 header('location: login.html');
