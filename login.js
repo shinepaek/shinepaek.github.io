@@ -20,7 +20,6 @@ function check() {
     var userPw = document.getElementById("psw");
 
 
-
     // check if stored data from register-form is equal to data from login form
     if(userPw.value != storedPw) { //if(userName.value != storedName || userPw.value != storedPw) {
         alert('ERROR');
