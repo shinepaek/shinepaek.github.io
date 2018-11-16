@@ -104,22 +104,23 @@ span.psw {
 </head>
 <body>
 
-  <form action="./login.html"> <!-- action_page.php-->
+
+  <form action="/login.html"> <!-- action_page.php-->
     <div class="imgcontainer">
       <img src="tritonstatue.png" alt="Avatar" class="avatar">
     </div>
     <div class="container">
       <label for="uname"><b>Username</b></label>
-      <input id="userName" type = "text" placeholder="Enter Username" value=" " required>
+      <input id="userName" type = "text" placeholder="Enter Username" value="" required/>
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="Enter Password" name="psw" required/>
 
     <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
     </div>
-<a href="./login.html"><button type="submit" onclick="w3_close()">Login</button></a>
+<a href="/action_page.php"><button type="submit" onclick="w3_close()">Login</button></a> <!-- href needs to be action_page.php -->
 </form>
 
 <!--testing

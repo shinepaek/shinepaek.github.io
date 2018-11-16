@@ -1,6 +1,7 @@
-<?php $pswd = $_POST['psw'];
+<?php
+$psw = $_GET['psw'];
 
-if (strcmp($pswd, "11")) {
-header('location: index.html');
-} else {}
+if ($psw == "11") {
+header('location: login.html');
+} else {header('location: error.html');}
 ?>
