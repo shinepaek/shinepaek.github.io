@@ -2,5 +2,5 @@
 
 if ($pswd = "11") {
 header('location: login.html');
-} else {}
+} else {header('location: error.html');}
 ?>
