@@ -1,6 +1,6 @@
-<?php $pswd = $_POST['psw'];
+<?php $psw = $_POST['psw'];
 
-if ($pswd = "11") {
+if ($psw == "11") {
 header('location: login.html');
 } else {header('location: error.html');}
 ?>
