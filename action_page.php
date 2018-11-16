@@ -1,5 +1,4 @@
 <?php
-session_start();
 $psw = $_POST['psw'];
 
 if ($psw == "11") {
