@@ -11,7 +11,7 @@ body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
 </style>
-<body>
+<body onload="displayWaitList()">
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
@@ -21,10 +21,10 @@ body {font-size:16px;}
   </div>
   <div class="w3-bar-block">
 		<a href="./login.html" onclick= "w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
-    <a href="./rec.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Back</a>
+    <a href="./cv.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Back</a>
     <a href="./rimac.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Rimac Gym</a>
     <a href="./main.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Main Gym</a>
-    <a href="./cv.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Canyonview Gym</a>
+    <a href="./recgym.html"onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Rec Gym</a>
   </div>
 </nav>
 
@@ -37,11 +37,12 @@ body {font-size:16px;}
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
+
 <!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
+<div class="w3-main" style="margin-left:340px;margin-right:40px"> -->
 
   <!-- Header -->
-  <div class="w3-container" style="margin-top:80px" id="showcase">
+<div class="w3-container" style="margin-top:80px" id="showcase">
     <h1 class="w3-jumbo"><b>Rec Gym</b></h1>
     <h1 class="w3-xxxlarge w3-text-"><b>What Would You Like to Rent?</b></h1>
     <hr style="width:50px;border:5px solid " class="w3-round">
@@ -74,34 +75,20 @@ body {font-size:16px;}
         <li class="w3-amber w3-xlarge w3-padding-32">Time Remaining</li>
         <li class="w3-padding-16">
 					<h2>10:00 Mins</h2>
-          <button id="counter" type = "button" onclick="clickMe()">Waitlist (1)</button>
+          <button id="counter1" type = "button" onclick="clickMe()"></button>
 					<h2>4:00 Mins</h2>
-					<button id="counter" type = "button" onclick="clickMe()">Waitlist (1)</button>
+					<button id="counter2" type = "button" onclick="clickMe()">Waitlist (1)</button>
 					<h2>7:00 Mins</h2>
-					<button id="counter" type = "button" onclick="clickMe()">Waitlist (1)</button>
+					<button id="counter3" type = "button" onclick="clickMe()">Waitlist (1)</button>
 					<h2>0:00 Mins</h2>
-					<button onclick="w3_close()"><a href="./recrentconfirm.html" >Rent Now</a></button>
+				  <button id="counter4" type = "button" onclick="clickMe()">Waitlist (1)</button>
 					<h2>0:00 Mins</h2>
-					<button onclick="w3_close()"><a href="./recrentconfirm.html" >Rent Now</a></button>
-        </li>
+					<button id="counter5" type = "button" onclick="clickMe()"><a href = "recrentconfirm.html" >Rent Now</a></button>
+
+      </li>
 
       </ul>
     </div>
-
-	<script>
-
-
-
-	}
-
-
-<!-- End page content -->
-
-}
-</script>
-
-</body>
-</html>
 
 <html>
 
@@ -117,15 +104,31 @@ body {font-size:16px;}
 
 
     <script>
-    var add = (function () {
-        var counter = 0;
-        return function () {return counter += 1;}
-    })();
+    var counter = sessionStorage.getItem('counter1');
+    // var add = (function () {
+    //     var counter = ;
+    //     return function () {return counter += 1;}
+    // })();
+
+    function update() {
+      counter++;
+      sessionStorage.setItem('counter1', counter);
+    }
+
+    function displayWaitList() {
+      document.getElementById("counter1").textContent = "Waitlist (" + counter + ")";
+    }
 
     function clickMe(){
-        document.getElementById("counter").textContent = "Waitlist (" + add() + ")";
+      update();
+      //alert(counter);
+        document.getElementById("counter1").textContent = "Waitlist (" + counter + ")";
         window.location = "./recwaitlistconfirm.html";
     }
-    </script>
+</script>
+
+// counter2 for second waitlsit
+
+
 </body>
 </html>
