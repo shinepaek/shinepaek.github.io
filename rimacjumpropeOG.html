@@ -11,7 +11,7 @@ body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
 </style>
-<body onload="displayWaitList()">
+<body>
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
@@ -43,74 +43,27 @@ body {font-size:16px;}
   <!-- Header -->
   <div class="w3-container" style="margin-top:80px" id="showcase">
     <h1 class="w3-jumbo"><b>Rimac Gym</b></h1>
-    <h1 class="w3-xxxlarge w3-text-"><b>Which Jump Rope Would You Like to Rent?</b></h1>
+    <h1 class="w3-xxxlarge w3-text-"><b>What Would You Like to Rent?</b></h1>
     <hr style="width:50px;border:5px solid " class="w3-round">
   </div>
 
   <!-- Different Equipment Types-->
-  <!DOCTYPE html>
 
-  <div class="w3-container">
-
-    <table class="w3-table-all w3-xxlarge w3-hoverable w3-centered">
-    <!-- <table class="w3-table-all w3-hoverable">
-    <table class="w3-table-all w3-centered">  -->
-      <tr class="w3-amber">
-        <th>Item Number</th>
-        <th>Time Remaining</th>
-      </tr>
-      <tr>
-      <tr>
-        <td>1</td>
-        <td>
-        	<button class = "w3-block" type = "button" onclick="clickMe()"><a href="./rimacrentconfirm.html" >Rent Now</a></button>
-        </td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>
-          <button class = "w3-block" type = "button" onclick="w3_close()"><a href="./rimacrentconfirm.html" >Rent Now</a></button>
-        </td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>
-        <button class = "w3-block" type = "button" onclick="clickMe()" href="./rimacwaitlistconfirm.html" >Waitlist (1)</button>
-        </td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>
-          <button id="counter1" class = "w3-block" type = "button" onclick="clickMe()"></button>
-        </td>
-      </tr>
-
-    </table>
-  </div>
-
-  </body>
-  </html>
-
-
-
-
-
-<!-- ORIGINAL CODE FOR TABLE
   <div class="w3-row-padding">
     <div class="w3-half w3-margin-bottom">
       <ul class="w3-ul w3-light-grey w3-center">
         <li class="w3-amber w3-xlarge w3-padding-32">Item Number</li>
         <li class="w3-padding-16">
 					<h2>1</h2>
-					<span class="w3-opacity">Yoga Ball</span>
+					<span class="w3-opacity">Jump Rope</span>
 					<h2>2</h2>
-					<span class="w3-opacity">Yoga Ball</span>
+					<span class="w3-opacity">Jump Rope</span>
 					<h2>3</h2>
-					<span class="w3-opacity">Yoga Ball</span>
+					<span class="w3-opacity">Jump Rope</span>
 					<h2>4</h2>
-					<span class="w3-opacity">Yoga Ball</span>
+					<span class="w3-opacity">Jump Rope</span>
 					<h2>5</h2>
-					<span class="w3-opacity">Yoga Ball</span>
+					<span class="w3-opacity">Jump Rope</span>
 
         </li>
       </ul>
@@ -144,9 +97,13 @@ body {font-size:16px;}
 
 <!-- End page content -->
 
+}
+</script>
 
+</body>
+</html>
 
-<!-- <html>
+<html>
 
 <body>
   <!--script type="text/javascript">
@@ -159,7 +116,7 @@ body {font-size:16px;}
   </script-->
 
 
-    <!-- <script>
+    <script>
     var add = (function () {
         var counter = 0;
         return function () {return counter += 1;}
@@ -170,36 +127,5 @@ body {font-size:16px;}
         window.location = "./rimacwaitlistconfirm.html";
     }
     </script>
-</body>
-</html> -->
-
-<body>
-<html>
-<script>
-var counter = sessionStorage.getItem('counter1');
-// var add = (function () {
-//     var counter = ;
-//     return function () {return counter += 1;}
-// })();
-
-function update() {
-  counter++;
-  sessionStorage.setItem('counter1', counter);
-}
-
-function displayWaitList() {
-  document.getElementById("counter1").textContent = "Waitlist (" + counter + ")";
-}
-
-function clickMe(){
-  update();
-  //alert(counter);
-    document.getElementById("counter1").textContent = "Waitlist (" + counter + ")";
-    window.location = "./rimacwaitlistconfirm.html";
-}
-</script>
-
-
-
 </body>
 </html>
