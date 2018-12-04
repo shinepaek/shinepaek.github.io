@@ -11,7 +11,7 @@ body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
 </style>
-<body onload="displayWaitList()">
+<body >
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
@@ -51,12 +51,12 @@ body {font-size:16px;}
   <!-- Different Equipment Types-->
 
   <div class="w3-row-padding">
-    <div class="w3-half w3-margin-bottom">
+    <div class="w3-margin-bottom">
       <ul class="w3-ul w3-light-grey w3-center">
-        <li class="w3-amber w3-xlarge w3-padding-32">Item Number</li>
+        <li class="w3-amber w3-xlarge w3-padding-32">Remaining Items</li>
         <li class="w3-padding-16">
-					<h2>1</h2>
-					<span class="w3-opacity">Yoga Mats</span>
+				  <h2>4</h2>
+					<!--<span class="w3-opacity">Yoga Mats</span>
 					<h2>2</h2>
 					<span class="w3-opacity">Yoga Mats</span>
 					<h2>3</h2>
@@ -64,27 +64,27 @@ body {font-size:16px;}
 					<h2>4</h2>
 					<span class="w3-opacity">Yoga Mats</span>
 					<h2>5</h2>
-					<span class="w3-opacity">Yoga Mats</span>
+					<span class="w3-opacity">Yoga Mats</span> -->
 
         </li>
       </ul>
     </div>
+  </div>
 
-    <div class="w3-half w3-margin-bottom">
+    <div class="w3-margin-bottom">
       <ul class="w3-ul w3-light-grey w3-center">
-        <li class="w3-amber w3-xlarge w3-padding-32">Time Remaining</li>
+        <li class="w3-large">Time Remaining</li>
         <li class="w3-padding-16">
 					<h2>10:00 Mins</h2>
-          <button id="counter1" type = "button" onclick="clickMe()"></button>
-					<h2>4:00 Mins</h2>
+          <button id="counter" type = "button" onclick="clickMe()">Rent Now</button>
+					<!-- <h2>4:00 Mins</h2>
 					<button id="counter2" type = "button" onclick="clickMe()">Waitlist (1)</button>
 					<h2>7:00 Mins</h2>
 					<button id="counter3" type = "button" onclick="clickMe()">Waitlist (1)</button>
 					<h2>0:00 Mins</h2>
 				  <button id="counter4" type = "button" onclick="clickMe()">Waitlist (1)</button>
 					<h2>0:00 Mins</h2>
-					<button id="counter5" type = "button" onclick="clickMe()"><a href = "recrentconfirm.html" >Rent Now</a></button>
-
+					<button id="counter5" type = "button" onclick="clickMe()"><a href = "recrentconfirm.html" >Rent Now</a></button> -->
       </li>
 
       </ul>
@@ -104,30 +104,43 @@ body {font-size:16px;}
 
 
     <script>
-    var counter = sessionStorage.getItem('counter1');
+    var counter = sessionStorage.getItem('counterN');
+    var numItems = sessionStorage.getItem('numItems');
     // var add = (function () {
     //     var counter = ;
     //     return function () {return counter += 1;}
     // })();
 
     function update() {
-      counter+1;
-      sessionStorage.setItem('counter1', counter);
+      counter++;
+      //alert("count: " + count);
+      sessionStorage.setItem('counterN', counter);
+
     }
 
-    function displayWaitList() {
-      document.getElementById("counter1").textContent = "Waitlist (" + counter + ")";
-    }
+     function displayWaitList() {
+       //document.getElementById("counter").textContent = ;
+     }
 
     function clickMe(){
       update();
-      //alert(counter);
-        document.getElementById("counter1").textContent = "Waitlist (" + counter + ")";
+      //alert("counter: " + counter);
+      if(4 < counter) {
+        sessionStorage.setItem('counterN', counter);
+        document.getElementById("counter").textContent = "Waitlist (" + counter + ")";
+        //alert("HELLO");
         window.location = "./recwaitlistconfirm.html";
+      }
+        //document.getElementById("counter1").textContent = "Waitlist (" + counter + ")";
+        //window.location = "./recwaitlistconfirm.html";
+    }
+
+    function changeName(){
+      document.getElementById("counter")
     }
 </script>
 
-// counter2 for second waitlsit
+
 
 
 </body>

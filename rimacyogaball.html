@@ -199,6 +199,19 @@ function clickMe(){
 }
 </script>
 
+<script>
+var counter2 = sessionStorage.getItem('counter2');
+
+function update(){
+  counter++
+  sessionStorage.setItem('counter2', counter);
+}
+
+function displayWaitlist(){
+  document.getElementById("counter2").textContent = "Waitlist(" + counter +")";
+  window.location = "./recwaitlistconfirm.html";
+}
+</script>
 
 
 </body>
