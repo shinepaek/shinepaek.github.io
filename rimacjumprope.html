@@ -107,21 +107,23 @@ body {font-size:16px;}
         </div>
         </td>
       </tr>
+
       <tr text-align: center>
 
         <td><p><font size = "6">3</p></td>
-        <td>
-        	<button class = "w3-block/2" type = "button" onclick="clickMe()" href="./rimacwaitlistconfirm.html">Waitlist (1)</button>
-          <div.a font-size: large>
-          <br/>
-          <p> <font size = "4.7">5:00 Mins</p>
-        </div>
-        </td>
+          <td>
+          	<button class = "w3-block/2" type = "button" onclick="clickMe()"><a href="./rimacrentconfirm.html">Rent Now</a></button>
+            <div.a font-size: large>
+            <br/>
+            <p> <font size = "4.7">0:00 Mins</p>
+          </div>
+          </td>
+        </tr>
       </tr>
       <tr>
         <td><p><font size = "6">4</p></td>
         <td>
-          <button id="counter1jp" class = "w3-block/2" type = "button" onclick="clickMe()"></button>
+          <button id="counter1" class = "w3-block/2" type = "button" onclick="clickMe()"></button>
           <p><font size = "4.7">10:00 Mins</p>
         </td>
       </tr>
@@ -227,17 +229,17 @@ var counter = sessionStorage.getItem('counter1jp');
 
 function update() {
   counter++;
-  sessionStorage.setItem('counter1jp', counter);
+  sessionStorage.setItem('counter1', counter);
 }
 
 function displayWaitList() {
-  document.getElementById("counter1jp").textContent = "Waitlist (" + counter + ")";
+  document.getElementById("counter1").textContent = "Waitlist (" + counter + ")";
 }
 
 function clickMe(){
   update();
   //alert(counter);
-    document.getElementById("counter1jp").textContent = "Waitlist (" + counter + ")";
+    document.getElementById("counter1").textContent = "Waitlist (" + counter + ")";
     window.location = "./rimacwaitlistconfirm.html";
 }
 </script>
