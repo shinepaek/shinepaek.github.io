@@ -110,7 +110,6 @@ body {font-size:16px;}
 </html>
 
 <html>
-
 <body>
   <!--script type="text/javascript">
 
@@ -123,15 +122,41 @@ body {font-size:16px;}
 
 
     <script>
-    var add = (function () {
-        var counter = 0;
-        return function () {return counter += 1;}
-    })();
+    var counter = sessionStorage.getItem('counterN');
+    var numItems = sessionStorage.getItem('numItems');
+    // var add = (function () {
+    //     var counter = ;
+    //     return function () {return counter += 1;}
+    // })();
+
+    function update() {
+      counter++;
+      //alert("count: " + count);
+      sessionStorage.setItem('counterN', counter);
+
+    }
+
+     function displayWaitList() {
+       //document.getElementById("counter").textContent = ;
+     }
 
     function clickMe(){
-        document.getElementById("counter").textContent = "Waitlist (" + add() + ")";
+      update();
+      //alert("counter: " + counter);
+      if(4 < counter) {
+        sessionStorage.setItem('counterN', counter);
+        document.getElementById("counter").textContent = "Waitlist (" + counter + ")";
+        //alert("HELLO");
         window.location = "./rimacwaitlistconfirm.html";
+      }
+        //document.getElementById("counter1").textContent = "Waitlist (" + counter + ")";
+        //window.location = "./recwaitlistconfirm.html";
     }
-    </script>
+
+    function changeName(){
+      document.getElementById("counter")
+    }
+</script>
+
 </body>
 </html>
