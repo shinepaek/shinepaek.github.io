@@ -218,46 +218,49 @@ body {font-size:16px;}
 </html> -->
 
 <body>
-<html>
-<script>
-var counter = sessionStorage.getItem('counter1');
-// var add = (function () {
-//     var counter = ;
-//     return function () {return counter += 1;}
-// })();
+  <!--script type="text/javascript">
 
-function update() {
-  counter++;
-  sessionStorage.setItem('counter1', counter);
-}
+    var clicks = 0;
+    function clickMe() {
+        clicks += 1;
+        document.getElementById("clicks").innerHTML = clicks;
+    };
+  </script-->
 
-function displayWaitList() {
-  document.getElementById("counter1").textContent = "Waitlist (" + counter + ")";
-}
-
-function clickMe(){
-  update();
-  //alert(counter);
-    document.getElementById("counter1").textContent = "Waitlist (" + counter + ")";
-    window.location = "./rimacwaitlistconfirm.html";
-}
-</script>
 
 <script>
-var counter2 = sessionStorage.getItem('counter2');
+    var counter = sessionStorage.getItem('counterN');
+    var numItems = sessionStorage.getItem('numItems');
+    // var add = (function () {
+    //     var counter = ;
+    //     return function () {return counter += 1;}
+    // })();
 
-function update(){
-  counter++
-  sessionStorage.setItem('counter2', counter);
-}
+    function update() {
+      counter++;
+      //alert("count: " + count);
+      sessionStorage.setItem('counterN', counter);
 
-function displayWaitlist(){
-  document.getElementById("counter2").textContent = "Waitlist(" + counter +")";
-  window.location = "./recwaitlistconfirm.html";
-}
+    }
 
+     function displayWaitList() {
+       //document.getElementById("counter").textContent = ;
+     }
+
+    function clickMe(){
+      update();
+      //alert("counter: " + counter);
+      if(4 < counter) {
+        sessionStorage.setItem('counterN', counter);
+        document.getElementById("counter").textContent = "Waitlist (" + counter + ")";
+        //alert("HELLO");
+        window.location = "./recwaitlistconfirm.html";
+      }
+        //document.getElementById("counter1").textContent = "Waitlist (" + counter + ")";
+        //window.location = "./recwaitlistconfirm.html";
+    }
+
+    function changeName(){
+      document.getElementById("counter")
+    }
 </script>
-
-
-</body>
-</html>
