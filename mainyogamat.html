@@ -10,8 +10,25 @@ body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
+#renting {
+  border-collapse: collapse;
+  width: 75%;
+}
+
+#renting td, #renting th {
+  border: 0px solid #ddd;
+  padding: 8px;
+}
+
+#renting th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: centered;
+  background-color: #ffcc00;
+  color: black;
+}
 </style>
-<body>
+<body onload="displayWaitList()">
 
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
@@ -54,22 +71,89 @@ body {font-size:16px;}
   </div>
 
   <!-- Different Equipment Types-->
+  <!DOCTYPE html>
 
+  <div class="w3-container">
+
+    <table id = "renting" class="w3-table-all w3-xlarge w3-hoverable w3-centered w3-content">
+      <border-collapse: collapse>
+      <border:1px solid black>
+    <!-- <table class="w3-table-all w3-hoverable">
+    <table class="w3-table-all w3-centered">  -->
+      <tr class="w3-amber">
+
+        <th>Item Number</th>
+        <th>Time Remaining</th>
+      </tr>
+      <tr>
+      <tr>
+        <td><p><font size = "6">1</p></td>
+        <td>
+        	<button class = "w3-block/2" type = "button" onclick="clickMe()"><a href="./mainrentconfirm.html">Rent Now</a></button>
+          <div.a>
+          <br/>
+          <p><font size = "4.7">0:00 Mins</p>
+        </div>
+
+        </td>
+      </tr>
+      <tr>
+        <td><p><font size = "6">2</p></td>
+        <td>
+        	<button class = "w3-block/2" type = "button" onclick="clickMe()"><a href="./mainrentconfirm.html">Rent Now</a></button>
+          <div.a font-size: large>
+          <br/>
+          <p> <font size = "4.7">0:00 Mins</p>
+        </div>
+        </td>
+      </tr>
+      <tr text-align: center>
+
+        <td><p><font size = "6">3</p></td>
+        <td>
+        	<button class = "w3-block/2" type = "button" onclick="clickMe()" href="./mainwaitlistconfirm.html">Waitlist (1)</button>
+          <div.a font-size: large>
+          <br/>
+          <p> <font size = "4.7">5:00 Mins</p>
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td><p><font size = "6">4</p></td>
+        <td>
+          <button id="counter1" class = "w3-block/2" type = "button" onclick="clickMe()"></button>
+          <p><font size = "4.7">10:00 Mins</p>
+        </td>
+      </tr>
+
+    </table>
+    <div class = "w3-panel w3-padding-small">
+    </div>
+  </div>
+
+  </body>
+  </html>
+
+
+
+
+
+<!-- ORIGINAL CODE FOR TABLE
   <div class="w3-row-padding">
     <div class="w3-half w3-margin-bottom">
       <ul class="w3-ul w3-light-grey w3-center">
         <li class="w3-amber w3-xlarge w3-padding-32">Item Number</li>
         <li class="w3-padding-16">
 					<h2>1</h2>
-					<span class="w3-opacity">Yoga Mats</span>
+					<span class="w3-opacity">Yoga Ball</span>
 					<h2>2</h2>
-					<span class="w3-opacity">Yoga Mats</span>
+					<span class="w3-opacity">Yoga Ball</span>
 					<h2>3</h2>
-					<span class="w3-opacity">Yoga Mats</span>
+					<span class="w3-opacity">Yoga Ball</span>
 					<h2>4</h2>
-					<span class="w3-opacity">Yoga Mats</span>
+					<span class="w3-opacity">Yoga Ball</span>
 					<h2>5</h2>
-					<span class="w3-opacity">Yoga Mats</span>
+					<span class="w3-opacity">Yoga Ball</span>
 
         </li>
       </ul>
@@ -86,9 +170,9 @@ body {font-size:16px;}
 					<h2>7:00 Mins</h2>
 					<button id="counter" type = "button" onclick="clickMe()">Waitlist (1)</button>
 					<h2>0:00 Mins</h2>
-					<button onclick="w3_close()"><a href="./mainrentconfirm.html" >Rent Now</a></button>
+					<button onclick="w3_close()"><a href="./rimacrentconfirm.html" >Rent Now</a></button>
 					<h2>0:00 Mins</h2>
-					<button onclick="w3_close()"><a href="./mainrentconfirm.html" >Rent Now</a></button>
+					<button onclick="w3_close()"><a href="./rimacrentconfirm.html" >Rent Now</a></button>
         </li>
 
       </ul>
@@ -103,13 +187,9 @@ body {font-size:16px;}
 
 <!-- End page content -->
 
-}
-</script>
 
-</body>
-</html>
 
-<html>
+<!-- <html>
 
 <body>
   <!--script type="text/javascript">
@@ -122,7 +202,7 @@ body {font-size:16px;}
   </script-->
 
 
-    <script>
+    <!-- <script>
     var add = (function () {
         var counter = 0;
         return function () {return counter += 1;}
@@ -130,8 +210,53 @@ body {font-size:16px;}
 
     function clickMe(){
         document.getElementById("counter").textContent = "Waitlist (" + add() + ")";
-        window.location = "./mainwaitlistconfirm.html";
+        window.location = "./rimacwaitlistconfirm.html";
     }
     </script>
+</body>
+</html> -->
+
+<body>
+<html>
+<script>
+var counter = sessionStorage.getItem('counter1');
+// var add = (function () {
+//     var counter = ;
+//     return function () {return counter += 1;}
+// })();
+
+function update() {
+  counter++;
+  sessionStorage.setItem('counter1', counter);
+}
+
+function displayWaitList() {
+  document.getElementById("counter1").textContent = "Waitlist (" + counter + ")";
+}
+
+function clickMe(){
+  update();
+  //alert(counter);
+    document.getElementById("counter1").textContent = "Waitlist (" + counter + ")";
+    window.location = "./mainwaitlistconfirm.html";
+}
+</script>
+
+<!-- <script>
+var counter2 = sessionStorage.getItem('counter2');
+
+function update(){
+  counter++
+  sessionStorage.setItem('counter2', counter);
+}
+
+function displayWaitlist(){
+  document.getElementById("counter2").textContent = "Waitlist(" + counter +")";
+  window.location = "./recwaitlistconfirm.html";
+} -->
+
+<!-- </script> -->
+
+
 </body>
 </html>
