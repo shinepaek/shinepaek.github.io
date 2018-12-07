@@ -121,7 +121,7 @@ body {font-size:16px;}
       <tr>
         <td><p><font size = "6">4</p></td>
         <td>
-          <button id="counter2mat" class = "w3-block/2" type = "button" onclick="clickMe()"></button>
+          <button id="counter1" class = "w3-block/2" type = "button" onclick="clickMe()"></button>
           <p><font size = "4.7">10:00 Mins</p>
         </td>
       </tr>
@@ -219,7 +219,7 @@ body {font-size:16px;}
 <body>
 <html>
 <script>
-var counter = sessionStorage.getItem('counter2mat');
+var counter = sessionStorage.getItem('counter1');
 // var add = (function () {
 //     var counter = ;
 //     return function () {return counter += 1;}
@@ -227,7 +227,7 @@ var counter = sessionStorage.getItem('counter2mat');
 
 function update() {
   counter++;
-  sessionStorage.setItem('counter2mat', counter);
+  sessionStorage.setItem('counter1', counter);
 }
 
 function displayWaitList() {
